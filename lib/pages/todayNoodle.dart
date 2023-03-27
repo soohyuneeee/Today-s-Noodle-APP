@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:noodle/home.dart';
+import 'dart:math';
 
+String Rand(){
+  List<String> name = ['AnchovyKalguksu.jpg','Jinjjambbong.jpeg','JinRamenSpicy.jpeg','Sarigomtang.png','YukgaejangKalguksu.jpeg'];
+  final random = Random().nextInt(name.length);
+  return name[random];
+
+}
 class TodayNoodle extends StatelessWidget {
   const TodayNoodle({Key? key}) : super(key: key);
 
@@ -42,6 +49,10 @@ class TodayNoodle extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: const Color(0xffFFF3EE)),
+                      child: Image.asset(
+                        'asset/image/noodles/'+Rand(),
+                        height: 150,
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
