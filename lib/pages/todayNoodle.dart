@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:noodle/home.dart';
 import 'dart:math';
 
+
 String Rand(){
-  List<String> name = ['AnchovyKalguksu.jpg','Jinjjambbong.jpeg','JinRamenSpicy.jpeg','Sarigomtang.png','YukgaejangKalguksu.jpeg'];
+  List<String> name = ['AnchovyKalguksu.png','Jinjjambbong.png','JinRamenSpicy.png','Sarigomtang.png','YukgaejangKalguksu.png','Anseongtangmyeon.png'];
   final random = Random().nextInt(name.length);
   return name[random];
 
