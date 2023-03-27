@@ -28,6 +28,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  http: ^0.11.3+17
+  pull_to_refresh: ^1.1.6
   flutter:
     sdk: flutter
 
@@ -81,6 +83,12 @@ flutter:
       fonts:
         - asset: asset/font/SpoqaHanSansNeo-Medium.otf
         - asset: asset/font/SpoqaHanSansNeo-Medium.ttf
+    - family: Ansungtangmyun
+      fonts:
+        - asset: asset/font/Ansungtangmyun-Bold.ttf
+        - asset: asset/font/Ansungtangmyun-ESG.ttf
+
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

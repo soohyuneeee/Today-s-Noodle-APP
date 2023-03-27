@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         title: 'MaterialApp',
         home: SafeArea(
           child: Scaffold(
-              backgroundColor: Colors.deepOrangeAccent,
+              backgroundColor: const Color(0xffFF9162),
               // appBar: AppBar(
               //   title: Text('MaterialApp'),
               //   centerTitle: true,
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                         child: const Text(
                           '오늘의 라면',
                           style: TextStyle(
-                              fontSize: 35, fontFamily: 'SpoqaHanSansNeo'),
+                              fontSize: 35, fontFamily: 'Ansungtangmyun'),
                         ),
                       ),
                       const SizedBox(
@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                           child: const Text(
                             '맞춤 라면',
                             style: TextStyle(
-                                fontSize: 35, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 35, fontFamily: 'Ansungtangmyun'),
                           )),
                       const SizedBox(
                         height: 60,
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                           child: const Text(
                             '커뮤니티',
                             style: TextStyle(
-                                fontSize: 35, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 35, fontFamily: 'Ansungtangmyun'),
                           )),
                     ]),
               )),

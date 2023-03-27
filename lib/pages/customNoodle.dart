@@ -8,7 +8,7 @@ class CustomNoodle extends StatelessWidget {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.deepOrangeAccent,
+          backgroundColor: const Color(0xffFF9162),
           body: Center(
             child: Stack(children: [
               Container(
@@ -31,7 +31,7 @@ class CustomNoodle extends StatelessWidget {
                         child: Text(
                           '맞춤 라면',
                           style: TextStyle(
-                              fontSize: 60, fontFamily: 'SpoqaHanSansNeo'),
+                              fontSize: 60, fontFamily: 'Ansungtangmyun'),
                         ),
                       ),
                     ),
@@ -51,7 +51,7 @@ class CustomNoodle extends StatelessWidget {
                           child: const Text(
                             '국물',
                             style: TextStyle(
-                                fontSize: 24, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                         ElevatedButton(
@@ -67,7 +67,7 @@ class CustomNoodle extends StatelessWidget {
                           child: const Text(
                             '국물\n없음',
                             style: TextStyle(
-                                fontSize: 24, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                       ],
@@ -88,7 +88,7 @@ class CustomNoodle extends StatelessWidget {
                           child: const Text(
                             '짜장\n라면',
                             style: TextStyle(
-                                fontSize: 24, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                         ElevatedButton(
@@ -104,7 +104,7 @@ class CustomNoodle extends StatelessWidget {
                           child: const Text(
                             '매운\n라면',
                             style: TextStyle(
-                                fontSize: 24, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                       ],
@@ -124,7 +124,7 @@ class CustomNoodle extends StatelessWidget {
                       child: const Text(
                         '메뉴로 돌아가기',
                         style: TextStyle(
-                            fontSize: 30, fontFamily: 'SpoqaHanSansNeo'),
+                            fontSize: 30, fontFamily: 'Ansungtangmyun'),
                       ),
                     ),
                   ],

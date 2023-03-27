@@ -17,7 +17,7 @@ class TodayNoodle extends StatelessWidget {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.deepOrangeAccent,
+          backgroundColor: const Color(0xffFF9162),
           body: Center(
             child: Stack(children: [
               Container(
@@ -40,7 +40,7 @@ class TodayNoodle extends StatelessWidget {
                         child: Text(
                           '오늘의 라면',
                           style: TextStyle(
-                              fontSize: 60, fontFamily: 'SpoqaHanSansNeo'),
+                              fontSize: 50, fontFamily: 'Ansungtangmyun'),
                         ),
                       ),
                     ),
@@ -51,7 +51,7 @@ class TodayNoodle extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           color: const Color(0xffFFF3EE)),
                       child: Image.asset(
-                        'asset/image/noodles/'+Rand(),
+                        'asset/image/noodles/${Rand()}',
                         height: 150,
                       ),
                     ),
@@ -71,7 +71,7 @@ class TodayNoodle extends StatelessWidget {
                           child: const Text(
                             '오 괜찮은데?',
                             style: TextStyle(
-                                fontSize: 24, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                         ElevatedButton(
@@ -87,7 +87,7 @@ class TodayNoodle extends StatelessWidget {
                           child: const Text(
                             '이거말고',
                             style: TextStyle(
-                                fontSize: 24, fontFamily: 'SpoqaHanSansNeo'),
+                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                       ],
@@ -107,7 +107,7 @@ class TodayNoodle extends StatelessWidget {
                       child: const Text(
                         '메뉴로 돌아가기',
                         style: TextStyle(
-                            fontSize: 30, fontFamily: 'SpoqaHanSansNeo'),
+                            fontSize: 30, fontFamily: 'Ansungtangmyun'),
                       ),
                     ),
                   ],
