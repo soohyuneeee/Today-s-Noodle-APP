@@ -4,7 +4,7 @@ import 'dart:math';
 
 
 String Rand(){
-  List<String> name = ['AnchovyKalguksu.png','Jinjjambbong.png','JinRamenSpicy.png','Sarigomtang.png','YukgaejangKalguksu.png','Anseongtangmyeon.png'];
+  List<String> name = ['AnchovyKalguksu.png','Jinjjambbong.png','JinRamenSpicy.png','Sarigomtang.png','YukgaejangKalguksu.png','Anseongtangmyeon.png','HotChickenStirFriedNoodles.png','HotChickenStirFriedNoodlesKarubo.png','Rabokki.png','SesameRamen.png','Snackmyeon.png'];
   final random = Random().nextInt(name.length);
   return name[random];
 
