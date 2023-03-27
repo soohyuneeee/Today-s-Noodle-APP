@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                     // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'asset/image/noooodle.png',
+                        'asset/image/logo.png',
                         height: 150,
                       ),
                       const SizedBox(
