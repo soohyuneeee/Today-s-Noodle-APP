@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:noodle/home.dart';
-class CustomNoodle extends StatelessWidget {
-  const CustomNoodle({Key? key}) : super(key: key);
+import 'dart:math';
+import 'package:noodle/detail/noodleInformation.dart';
+// void reload() native;
+String Rand(){
+  List<String> name = ['AnchovyKalguksu.png','Jinjjambbong.png','JinRamenSpicy.png','Sarigomtang.png','YukgaejangKalguksu.png','Anseongtangmyeon.png','HotChickenStirFriedNoodles.png','HotChickenStirFriedNoodlesKarubo.png','Rabokki.png','SesameRamen.png','Snackmyeon.png'];
+  final random = Random().nextInt(name.length);
+  return name[random];
+}
+// Noodle Randoom(){
+//   List<String> name = ['AnchovyKalguksu','Jinjjambbong','JinRamenSpicy','Sarigomtang','YukgaejangKalguksu','Anseongtangmyeon','HotChickenStirFriedNoodles','HotChickenStirFriedNoodlesKarubo','Rabokki','SesameRamen','Snackmyeon'];
+//   int random = Random().nextInt(name.length);
+//   String noodleName = name[random];
+//   Noodle noodle = Noodle.noodleName;
+//   return noodle;
+// }
+class TodayNoodle extends StatelessWidget {
+  const TodayNoodle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +44,21 @@ class CustomNoodle extends StatelessWidget {
                           color: const Color(0xffFFF3EE)),
                       child: const Center(
                         child: Text(
-                          '맞춤 라면',
+                          '오늘의 라면',
                           style: TextStyle(
-                              fontSize: 60, fontFamily: 'Ansungtangmyun'),
+                              fontSize: 50, fontFamily: 'Ansungtangmyun'),
                         ),
+                      ),
+                    ),
+                    Container(
+                      width: 340,
+                      height: 350,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(0xffFFF3EE)),
+                      child: Image.asset(
+                        'asset/image/noodles/${Rand()}',
+                        height: 150,
                       ),
                     ),
                     Row(
@@ -43,66 +69,31 @@ class CustomNoodle extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
                             onPrimary: Colors.black,
-                            fixedSize: const Size(160, 230),
+                            fixedSize: const Size(160, 100),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                           ),
                           child: const Text(
-                            '국물',
+                            '오 괜찮은데?',
                             style: TextStyle(
                                 fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
                             onPrimary: Colors.black,
-                            fixedSize: const Size(160, 230),
+                            fixedSize: const Size(160, 100),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                           ),
                           child: const Text(
-                            '국물\n없음',
-                            style: TextStyle(
-                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            primary: const Color(0xffFFF3EE),
-                            onPrimary: Colors.black,
-                            fixedSize: const Size(160, 230),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                          ),
-                          child: const Text(
-                            '짜장\n라면',
-                            style: TextStyle(
-                                fontSize: 24, fontFamily: 'Ansungtangmyun'),
-                          ),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            primary: const Color(0xffFFF3EE),
-                            onPrimary: Colors.black,
-                            fixedSize: const Size(160, 230),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                          ),
-                          child: const Text(
-                            '매운\n라면',
+                            '이거말고',
                             style: TextStyle(
                                 fontSize: 24, fontFamily: 'Ansungtangmyun'),
                           ),
@@ -111,8 +102,8 @@ class CustomNoodle extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
-                      },
+                          Navigator.pop(context);
+                        },
                       style: ElevatedButton.styleFrom(
                         primary: const Color(0xffFFF3EE),
                         onPrimary: Colors.black,
@@ -137,4 +128,3 @@ class CustomNoodle extends StatelessWidget {
     );
   }
 }
-

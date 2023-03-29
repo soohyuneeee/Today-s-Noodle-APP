@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/todayNoodle.dart';
-import 'pages/customNoodle.dart';
+import 'screens/todayNoodle.dart';
+import 'screens/customNoodle.dart';
 void main() {
   runApp(const MaterialApp(
     home: HomePage(),
@@ -39,9 +39,9 @@ class HomePage extends StatelessWidget {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => const TodayNoodle()));
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xffFFDACA),
+                          primary: const Color(0xffFFDACA),
                           onPrimary: Colors.black,
-                          fixedSize: Size(280, 60),
+                          fixedSize: const Size(280, 60),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0)),
                         ),
@@ -54,6 +54,7 @@ class HomePage extends StatelessWidget {
                       const SizedBox(
                         height: 60,
                       ),
+                      
                       ElevatedButton(
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => const CustomNoodle()));

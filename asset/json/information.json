@@ -1,0 +1,83 @@
+{
+  "length" : 11,
+  "noodle": [
+    {
+      "name": "AnchovyKalguksu",
+      "korean": "멸치칼국수",
+      "image": "asset/image/noodles/AnchovyKalguksu.png",
+      "isSoup": true,
+      "isSpicy": 0
+    },
+    {
+      "name": "Anseongtangmyeon",
+      "korean": "안성탕면",
+      "image": "asset/image/noodles/Anseongtangmyeon.png",
+      "isSoup": true,
+      "isSpicy": 0
+    },
+    {
+      "name": "HotChickenStirFriedNoodles",
+      "korean": "불닭볶음면",
+      "image": "asset/image/noodles/HotChickenStirFriedNoodles.png",
+      "isSoup": false,
+      "isSpicy": 5
+    },
+    {
+      "name": "HotChickenStirFriedNoodlesKarubo",
+      "korean": "까르보 불닭볶음면",
+      "image": "asset/image/noodles/HotChickenStirFriedNoodlesKarubo.png",
+      "isSoup": false,
+      "isSpicy": 4
+    },
+    {
+      "name": "Jinjjambbong",
+      "korean": "진짬뽕",
+      "image": "asset/image/noodles/Jinjjambbong.png",
+      "isSoup": false,
+      "isSpicy": 3
+    },
+    {
+      "name": "JinRamenSpicy",
+      "korean": "진라면 매운맛",
+      "image": "asset/image/noodles/JinRamenSpicy.png",
+      "isSoup": false,
+      "isSpicy": 3
+    },
+    {
+      "name": "Rabokki",
+      "korean": "라볶이",
+      "image": "asset/image/noodles/Rabokki.png",
+      "isSoup": false,
+      "isSpicy": 2
+    },
+    {
+      "name": "Sarigomtang",
+      "korean": "사리곰탕",
+      "image": "asset/image/noodles/Sarigomtang.png",
+      "isSoup": true,
+      "isSpicy": 0
+    },
+    {
+      "name": "SesameRamen",
+      "korean": "참깨라면",
+      "image": "asset/image/noodles/SesameRamen.png",
+      "isSoup": true,
+      "isSpicy": 3
+    },
+    {
+      "name": "Snackmyeon",
+      "korean": "스낵면",
+      "image": "asset/image/noodles/Snackmyeon.png",
+      "isSoup": true,
+      "isSpicy": 2
+    },
+    {
+      "name": "YukgaejangKalguksu",
+      "korean": "육개장칼국수",
+      "image": "asset/image/noodles/YukgaejangKalguksu.png",
+      "isSoup": true,
+      "isSpicy": 3
+    }
+  ]
+}
+
