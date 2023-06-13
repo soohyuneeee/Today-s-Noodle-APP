@@ -1,22 +1,46 @@
-import 'package:flutter/material.dart';
-import 'package:noodle/home.dart';
 import 'dart:math';
-import 'package:noodle/detail/noodleInformation.dart';
-// void reload() native;
-String Rand(){
-  List<String> name = ['AnchovyKalguksu.png','Jinjjambbong.png','JinRamenSpicy.png','Sarigomtang.png','YukgaejangKalguksu.png','Anseongtangmyeon.png','HotChickenStirFriedNoodles.png','HotChickenStirFriedNoodlesKarubo.png','Rabokki.png','SesameRamen.png','Snackmyeon.png'];
-  final random = Random().nextInt(name.length);
-  return name[random];
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+List<String> name = [
+  'AnchovyKalguksu.png',
+  'Jinjjambbong.png',
+  'JinRamenSpicy.png',
+  'Sarigomtang.png',
+  'YukgaejangKalguksu.png',
+  'Anseongtangmyeon.png',
+  'HotChickenStirFriedNoodles.png',
+  'HotChickenStirFriedNoodlesKarubo.png',
+  'Rabokki.png',
+  'SesameRamen.png',
+  'Snackmyeon.png'
+];
+class SimpleController extends GetxController {
+  int random = 0;
+  String? randNoodle = '';
+
+  void Rand() {
+    random = Random().nextInt(name.length);
+    randNoodle = name[random];
+    update();
+  }
 }
-// Noodle Randoom(){
-//   List<String> name = ['AnchovyKalguksu','Jinjjambbong','JinRamenSpicy','Sarigomtang','YukgaejangKalguksu','Anseongtangmyeon','HotChickenStirFriedNoodles','HotChickenStirFriedNoodlesKarubo','Rabokki','SesameRamen','Snackmyeon'];
-//   int random = Random().nextInt(name.length);
-//   String noodleName = name[random];
-//   Noodle noodle = Noodle.noodleName;
-//   return noodle;
-// }
-class TodayNoodle extends StatelessWidget {
-  const TodayNoodle({Key? key}) : super(key: key);
+
+class TodayNoodle extends StatefulWidget {
+  TodayNoodle({Key? key}) : super(key: key);
+
+  @override
+  State<TodayNoodle> createState() => _TodayNoodleState();
+  final controller = Get.put(SimpleController());
+}
+
+class _TodayNoodleState extends State<TodayNoodle> {
+  @override
+  void initState() {
+    super.initState();
+    widget.controller.Rand();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +48,9 @@ class TodayNoodle extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           backgroundColor: const Color(0xffFF9162),
-          body: Center(
-            child: Stack(children: [
+          body: GetBuilder<SimpleController>(builder: (controller) {
+            return Center(
+                child: Stack(children: [
               Container(
                 width: 380,
                 height: 800,
@@ -57,7 +82,7 @@ class TodayNoodle extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           color: const Color(0xffFFF3EE)),
                       child: Image.asset(
-                        'asset/image/noodles/${Rand()}',
+                        'asset/image/noodles/${controller.randNoodle}',
                         height: 150,
                       ),
                     ),
@@ -82,7 +107,7 @@ class TodayNoodle extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-
+                            controller.Rand();
                           },
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
@@ -102,8 +127,8 @@ class TodayNoodle extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                          Navigator.pop(context);
-                        },
+                        Navigator.pop(context);
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: const Color(0xffFFF3EE),
                         onPrimary: Colors.black,
@@ -121,8 +146,8 @@ class TodayNoodle extends StatelessWidget {
                   ],
                 ),
               ),
-            ]),
-          ),
+            ]));
+          }),
         ),
       ),
     );
