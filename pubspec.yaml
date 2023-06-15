@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.3 <3.0.0'
+  sdk: ">=2.19.3 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -29,9 +29,17 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   get: ^4.6.5
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.0.0
+  build_runner: ^2.1.5
+  flutter_native_splash: ^2.2.19
+  intl: ^0.18.0
+
   flutter:
     sdk: flutter
-#  flutter_screenutil: ^{latest version}
+
+  #  flutter_screenutil: ^{latest version}
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -39,9 +47,12 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  hive_generator: ^1.1.0
   flutter_test:
     sdk: flutter
 
+flutter_native_splash:
+  image: asset/image/logo.png
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
