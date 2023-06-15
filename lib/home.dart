@@ -18,14 +18,9 @@ class HomePage extends StatelessWidget {
         home: SafeArea(
           child: Scaffold(
               backgroundColor: const Color(0xffFF9162),
-              // appBar: AppBar(
-              //   title: Text('MaterialApp'),
-              //   centerTitle: true,
-              // ),
               body: Center(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset(
                         'asset/image/logo.png',
@@ -36,7 +31,7 @@ class HomePage extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const TodayNoodle()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => TodayNoodle()));
                         },
                         style: ElevatedButton.styleFrom(
                           primary: const Color(0xffFFDACA),
@@ -75,22 +70,22 @@ class HomePage extends StatelessWidget {
                       const SizedBox(
                         height: 60,
                       ),
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            primary: const Color(0xffFFDACA),
-                            onPrimary: Colors.black,
-                            // elevation: 4,
-                            fixedSize: const Size(280, 60),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                          ),
-                          child: const Text(
-                            '커뮤니티',
-                            style: TextStyle(
-                                fontSize: 35, fontFamily: 'Ansungtangmyun'),
-                          )),
+                      // ElevatedButton(
+                      //     onPressed: () {},
+                      //     style: ElevatedButton.styleFrom(
+                      //       primary: const Color(0xffFFDACA),
+                      //       onPrimary: Colors.black,
+                      //       // elevation: 4,
+                      //       fixedSize: const Size(280, 60),
+                      //       shape: RoundedRectangleBorder(
+                      //         borderRadius: BorderRadius.circular(20.0),
+                      //       ),
+                      //     ),
+                      //     child: const Text(
+                      //       '커뮤니티',
+                      //       style: TextStyle(
+                      //           fontSize: 35, fontFamily: 'Ansungtangmyun'),
+                      //     )),
                     ]),
               )),
         ));
