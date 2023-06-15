@@ -1,11 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:noodle/home.dart';
-import 'package:noodle/model/soup.dart';
-import 'package:noodle/model/nosoup.dart';
-import 'soup.dart';
 import 'package:flutter/services.dart';
+import 'package:noodle/model/nosoup.dart';
+import 'package:noodle/model/soup.dart';
+import 'package:noodle/screens/jjajangsoup.dart';
+import 'package:noodle/screens/nosoup.dart';
+import 'package:noodle/screens/spicysoup.dart';
+
+import 'soup.dart';
+
 class CustomNoodle extends StatefulWidget {
   const CustomNoodle({Key? key}) : super(key: key);
 
@@ -14,44 +18,17 @@ class CustomNoodle extends StatefulWidget {
 }
 
 class _CustomNoodleState extends State<CustomNoodle> {
-
   final List<SoupModel> soups = <SoupModel>[];
   final List<NoSoupModel> nosoups = <NoSoupModel>[];
   var json_data;
   String first_image = "";
 
-
-
-
   @override
-  void initState () {
+  void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_){
-      _asyncMethod();
-    });
-
-  }
-
-  _asyncMethod() async {
-
-    json_data =  await rootBundle.loadString('asset/json/information.json');
-    var decode_data = json.decode(json_data);
-    // first_image = decode_data["noodle"][3]["image"];
-    for(int i = 0; i < 11; i++){
-      if(decode_data["noodle"][i]["isSoup"]){
-        soups.add(SoupModel(decode_data["noodle"][i]["name"], decode_data["noodle"][i]["korean"], decode_data["noodle"][i]["image"], decode_data["noodle"][i]["isSpicy"]));
-      } else{
-        nosoups.add(NoSoupModel(decode_data["noodle"][i]["name"], decode_data["noodle"][i]["korean"], decode_data["noodle"][i]["image"], decode_data["noodle"][i]["isSpicy"]));
-      }
-    }
-    setState(() {
-
-    });
-    setState(() {
-
+    WidgetsBinding.instance.addPostFrameCallback((_) {
     });
   }
-
 
 
   @override
@@ -61,8 +38,7 @@ class _CustomNoodleState extends State<CustomNoodle> {
         child: Scaffold(
           backgroundColor: const Color(0xffFF9162),
           body: Center(
-            child: Stack(
-                children: [
+            child: Stack(children: [
               Container(
                 width: 380,
                 height: 800,
@@ -92,7 +68,11 @@ class _CustomNoodleState extends State<CustomNoodle> {
                       children: [
                         ElevatedButton(
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => SoupPage(soups: soups)));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SoupPage()));
                           },
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
@@ -109,7 +89,13 @@ class _CustomNoodleState extends State<CustomNoodle> {
                           ),
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        NoSoupPage()));
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
                             onPrimary: Colors.black,
@@ -130,7 +116,13 @@ class _CustomNoodleState extends State<CustomNoodle> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        JjajangSoupPage()));
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
                             onPrimary: Colors.black,
@@ -146,7 +138,13 @@ class _CustomNoodleState extends State<CustomNoodle> {
                           ),
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SpicySoupPage()));
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xffFFF3EE),
                             onPrimary: Colors.black,
@@ -191,4 +189,3 @@ class _CustomNoodleState extends State<CustomNoodle> {
     );
   }
 }
-
